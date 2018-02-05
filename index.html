@@ -15,6 +15,7 @@
         <h2>1. Color changer</h2>
         <button id="gray_button">Gray</button>
         <button id="blue_button">Blue</button>
+        <button id="pink_button">Pink</button>
         <div id="color_box" class="gray"></div>        
         <script>
             gray_button.onclick = function() {
@@ -22,7 +23,10 @@
             };
             blue_button.onclick = function () {
                 color_box.className = "blue";
-            }
+            };
+            pink_button.onclick = function() {
+                color_box.className = "pink";
+            };
             /* TODO 1
              *
              * Add a third button (and the associated event handler)
@@ -38,6 +42,9 @@
         <script>
             var count=0;
             counter_button.onclick = function() {
+                count++
+                countspan.text = count
+            };
                 /* TODO 2
                  *
                  * Fill in this function so that it increments
@@ -54,6 +61,11 @@
         <button id="even_or_odd_button">Is the count even or odd?</button>
         <script>
             even_or_odd_button.onclick = function() {
+                if (count % 2 === 0) {
+                  alert("Yay, count is even!");
+                } else {
+                  alert("Count is odd!);
+                };
                 /* TODO 3
                  *
                  * Fill in this function so that it shows an
